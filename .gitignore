@@ -1,0 +1,7 @@
+# Module directory 
+tf-eks/.terraform/
+
+# Compiled files
+tf-eks/.terraform.lock.hcl
+
+#Test
