@@ -40,5 +40,14 @@ pipeline{
                 }
             }
         }
+        stage('Terraform Apply'){
+            steps {
+                script {
+                    dir('tf-aws-eks'){
+                        sh 'terraform apply'
+                    }
+                }
+            }
+        }
     }
 }
