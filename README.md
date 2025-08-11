@@ -1,1 +1,1 @@
-terraform apply -var-file=variables/test.tfvars
+terraform apply
