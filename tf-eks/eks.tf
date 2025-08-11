@@ -1,10 +1,10 @@
 # Creating EKS
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "~> 21.0.5"
+  version = "19.0.4"
 
   name    = "my-eks-cluster"
-  kubernetes_version = "1.33"
+  kubernetes_version = "1.27"
   endpoint_public_access  = true
 
   vpc_id                   = module.vpc.vpc_id
@@ -14,7 +14,7 @@ module "eks" {
   eks_managed_node_groups = {
     nodes = {
       min_size     = 1
-      max_size     = 2
+      max_size     = 3
       desired_size = 2
 
       instance_types = ["t2.small"]
